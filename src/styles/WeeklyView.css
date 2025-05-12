@@ -1,0 +1,260 @@
+/* styles/WeeklyView.css */
+
+.weekly-view {
+  width: 100%;
+}
+
+/* Navegador de semanas */
+.week-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  transition: all 0.2s;
+}
+
+.nav-button:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.current-week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.current-week span {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.current-week-button {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.current-week-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Gráficos semanales */
+.weekly-charts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.chart-container {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.chart-average {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.chart-average span {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.chart-body {
+  height: 300px;
+  position: relative;
+}
+
+.horizontal-chart {
+  height: 400px;
+}
+
+/* Resumen semanal */
+.weekly-summary {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.summary-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+}
+
+.summary-table-container {
+  overflow-x: auto;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summary-table th, .summary-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.summary-table th {
+  background-color: var(--background-color);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.summary-table th:first-child, .summary-table td:first-child {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.summary-table tr:nth-child(even) {
+  background-color: var(--background-color);
+}
+
+.habit-cell {
+  text-align: center;
+}
+
+.habit-completed {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--success-color);
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.habit-not-completed {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.total-cell {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.daily-total {
+  color: var(--text-color);
+}
+
+.weekly-total {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Estado vacío */
+.empty-state {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chart-body {
+    height: 250px;
+  }
+  
+  .horizontal-chart {
+    height: 350px;
+  }
+  
+  .chart-container {
+    padding: 1rem;
+  }
+  
+  .weekly-summary {
+    padding: 1rem;
+  }
+  
+  .summary-table th, .summary-table td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-navigation {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .current-week {
+    order: -1;
+  }
+  
+  .chart-body {
+    height: 200px;
+  }
+  
+  .horizontal-chart {
+    height: 250px;
+  }
+  
+  .summary-table {
+    font-size: 0.75rem;
+  }
+  
+  .summary-table th, .summary-table td {
+    padding: 0.375rem;
+  }
+  
+  .habit-completed, .habit-not-completed {
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+  }
+}
