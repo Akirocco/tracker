@@ -1,0 +1,422 @@
+/* styles/Settings.css */
+
+.settings {
+  width: 100%;
+}
+
+.settings-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Pestañas de configuración */
+.settings-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.tab-button {
+  padding: 0.75rem 1rem;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  color: var(--text-light);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.tab-button.active {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+/* Contenido de configuración */
+.settings-content {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+/* Formularios */
+.form-container {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.required {
+  color: var(--danger-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: white;
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+
+.form-group input[type="color"] {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.half {
+  flex: 1;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: var(--border-color);
+}
+
+/* Lista de elementos */
+.items-list {
+  margin-bottom: 1.5rem;
+}
+
+.list-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.settings-item {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  align-items: center;
+}
+
+.item-color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.item-description, .item-meta {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-button, .delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  transition: all 0.2s;
+}
+
+.edit-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.delete-button {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+.empty-list-message {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  color: var(--text-light);
+}
+
+/* Configuración de datos */
+.data-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.settings-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.settings-card {
+  padding: 1.5rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+}
+
+.danger-card {
+  border-left: 4px solid var(--danger-color);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.card-description {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.card-button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.danger-button {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.danger-button:hover {
+  background-color: #dc2626;
+}
+
+.file-input-label {
+  display: block;
+  padding: 0.75rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-input-label:hover {
+  background-color: var(--primary-dark);
+}
+
+.file-input {
+  display: none;
+}
+
+.data-info {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+.info-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.info-list {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.info-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .settings-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .settings-content {
+    padding: 1rem;
+  }
+  
+  .form-container {
+    padding: 1rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .settings-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-title {
+    font-size: 1.25rem;
+  }
+  
+  .settings-tabs {
+    justify-content: flex-start;
+  }
+  
+  .tab-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .form-title {
+    font-size: 1.125rem;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .submit-button, .cancel-button {
+    width: 100%;
+  }
+  
+  .settings-cards {
+    gap: 1rem;
+  }
+}
