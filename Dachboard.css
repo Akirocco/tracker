@@ -1,0 +1,297 @@
+/* styles/Dashboard.css */
+
+.dashboard {
+  width: 100%;
+}
+
+.dashboard-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Resumen del día */
+.today-summary {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+}
+
+.today-summary .widget-title {
+  color: white;
+  opacity: 0.9;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.progress-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    rgba(255, 255, 255, 0.9) calc(var(--percentage) * 1%), 
+    rgba(255, 255, 255, 0.2) 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgba(37, 99, 235, 0.9);
+}
+
+.progress-text {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.progress-details {
+  flex: 1;
+}
+
+.progress-details p {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.completed-count, .total-count {
+  font-weight: 600;
+}
+
+.action-button {
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Rendimiento Semanal */
+.weekly-performance {
+  margin-top: 1.5rem;
+}
+
+/* Metas en Progreso */
+.goals-progress {
+  margin-top: 1.5rem;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.goal-card {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.goal-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.goal-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.goal-progress-bar {
+  height: 0.5rem;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.goal-progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 9999px;
+}
+
+.goal-percentage {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.goal-deadline {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.see-more-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Rendimiento Reciente */
+.recent-performance {
+  margin-top: 1.5rem;
+}
+
+.recent-days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.day-card {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.day-info {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.day-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.day-date {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.day-completion-indicator {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Variables Diarias */
+.daily-variables {
+  margin-top: 1.5rem;
+}
+
+.variables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.variable-card {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.variable-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+.variable-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.data-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.data-label {
+  color: var(--text-light);
+}
+
+.data-value {
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .progress-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .goals-grid, .recent-days-grid, .variables-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 1.25rem;
+  }
+  
+  .progress-text {
+    font-size: 1.25rem;
+  }
+  
+  .goals-grid, .variables-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .recent-days-grid {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 0.375rem), 1fr));
+  }
+}
