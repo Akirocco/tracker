@@ -1,0 +1,454 @@
+/* styles/GlobalView.css */
+
+.global-view {
+  width: 100%;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Resumen global */
+.global-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.global-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.summary-card {
+  padding: 1.5rem;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.average-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.progress-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--primary-color) calc(var(--percentage) * 1%), 
+    #e2e8f0 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progress-circle-inner {
+  position: relative;
+  text-align: center;
+}
+
+.progress-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.progress-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.stat-value {
+  font-weight: 600;
+}
+
+/* Rachas */
+.streaks-container {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.streaks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.streak-card {
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.streak-name {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.streak-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.streak-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* Gráficos de tendencia */
+.trends-section {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.chart-container {
+  margin-bottom: 1rem;
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.chart-body {
+  height: 300px;
+  position: relative;
+}
+
+/* Estadísticas por día de la semana */
+.weekday-stats-section {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.weekday-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.weekday-card {
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.weekday-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.weekday-percentage {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.weekday-bar-container {
+  height: 0.5rem;
+  background-color: var(--border-color);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.weekday-bar {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+/* Ranking de hábitos */
+.habits-ranking-section {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.horizontal-chart {
+  height: 400px;
+}
+
+/* Tabla de hábitos */
+.habits-table-section {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.habits-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.habits-table th, .habits-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.habits-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.habits-table tr:hover {
+  background-color: var(--background-color);
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background-color: var(--border-color);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+  max-width: 150px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.trend {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.trend.positive {
+  color: var(--success-color);
+}
+
+.trend.negative {
+  color: var(--danger-color);
+}
+
+.trend.neutral {
+  color: var(--text-light);
+}
+
+/* Estadísticas de variables */
+.variables-stats-section {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.variables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.variable-card {
+  padding: 1.25rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.variable-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.variable-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.variable-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estado vacío */
+.empty-state {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .global-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .average-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .streaks-container, .trends-section, .weekday-stats-section, 
+  .habits-ranking-section, .habits-table-section, .variables-stats-section {
+    padding: 1rem;
+  }
+  
+  .habits-table th, .habits-table td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .chart-body {
+    height: 250px;
+  }
+  
+  .horizontal-chart {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.25rem;
+  }
+  
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .progress-circle::before {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .progress-value {
+    font-size: 1.25rem;
+  }
+  
+  .streaks-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+  .trends-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-body {
+    height: 200px;
+  }
+  
+  .horizontal-chart {
+    height: 250px;
+  }
+  
+  .weekday-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .weekday-name {
+    font-size: 0.875rem;
+  }
+  
+  .weekday-percentage {
+    font-size: 1rem;
+  }
+  
+  .habits-table {
+    font-size: 0.75rem;
+  }
+  
+  .habits-table th, .habits-table td {
+    padding: 0.375rem;
+  }
+}
