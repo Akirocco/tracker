@@ -4,12 +4,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  server: {
-    port: 5173,
-    open: true
-  },
+  root: '.', // Asegurarse de que Vite busca el index.html en la raíz
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
     sourcemap: true
   }
 });
